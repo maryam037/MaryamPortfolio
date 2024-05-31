@@ -129,12 +129,13 @@ body {
 .section-title {
     color: #1d2b64;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .section-title.text-center::after {
     content: "";
     display: block;
-    width: 60px;
+    width: 80px;
     height: 3px;
     background: #f8cdda;
     margin: 10px auto;
