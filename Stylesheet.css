@@ -36,15 +36,17 @@ body {
 .wavy {
     position: relative;
     display: inline;
+    white-space: nowrap;
    
 }
+
 
 .wavy span {
     font-family: 'Roboto', sans-serif;
     position: relative;
     display: inline-block;
     color:  #f8cdda;
-    font-size: 3rem;
+    font-size: 2rem;
     animation: animate 1s ease-in-out infinite;
     animation-delay: calc(0.05s * var(--i));
 }
@@ -79,7 +81,19 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .intro-text {
+        font-size: 1.5rem;
+    }
 
+    .wavy {
+        font-size: 0.5rem;
+    }
+
+    .intro-text2 {
+        font-size: 1.5rem;
+    }
+}
 
 .header .btn {
     margin-top: 20px;
