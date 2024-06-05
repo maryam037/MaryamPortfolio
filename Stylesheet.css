@@ -147,6 +147,7 @@ body {
     margin-top: 30px;
 }
 
+
 .section-title.text-center::after {
     content: "";
     display: block;
@@ -413,6 +414,8 @@ footer a:hover {
             overflow-wrap: break-word;
             word-wrap: break-word;
             word-break: break-word;
+            display: none; /* Initially hidden */
+            
 }
 
 .line {
