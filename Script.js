@@ -39,3 +39,58 @@ document.addEventListener('DOMContentLoaded', function () {
     updateText(); // Initial call to set the first text
     setInterval(updateText, 2000); // Update text every 2 seconds
 });
+
+const lines = [
+    '<div class="line"><span class="comment"># Know me Better. </span></div>',
+    '<div class="line"><span class="comment"># I can, because I believe.</span></div>',
+    '<div class="line"><span class="comment"># My vast variety of skills is continuously expanding.</span></div>',
+    '<br>',
+    '<div class="line"><span class="keyword">class</span> <span class="classname"></span><span class="punctuation">:</span></div>',
+    '<br>',
+    '<div class="line indent"><span class="keyword">def</span> <span class="function-name">__init__</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
+    '<br>',
+    '<div class="line indent-2"><span class="parameter">self</span><span class="punctuation">.</span><span class="property">name</span> <span class="operator">=</span> <span class="string">\'Maryam Ashfaq\'</span></div>',
+    '<div class="line indent-2"><span class="parameter">self</span><span class="punctuation">.</span><span class="property">date_of_birth</span> <span class="operator">=</span> <span class="number">5-4-2001</span></div>',
+    '<div class="line indent-2"><span class="parameter">self</span><span class="punctuation">.</span><span class="property">email</span> <span class="operator">=</span> <span class="string">\'Maryamashfaq1828@gmail.com\'</span></div>',
+    '<div class="line indent"><br><span class="keyword">def</span> <span class="function-name">work_experience</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
+    '<br>',
+    '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
+    '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2022-2022\'</span><span class="punctuation">:</span> <span class="string">\'Front-End Developer Intern at Teresol Pvt Ltd. \'</span> <span class="punctuation">},</span></div>',
+    '<div class="line indent-2"><span class="punctuation">]</span></div>',
+    '<br>',
+    '<div class="line indent"><span class="keyword">def</span> <span class="function-name">education</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
+    '<br>',
+    '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
+    '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2020-Present\'</span><span class="punctuation">:</span> <span class="string">"Bachelor of Science in Information Technology from Bahria University, Islamabad, Pakistan"</span> <span class="punctuation">},</span></div>',
+    '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2021-2022\'</span><span class="punctuation">:</span> <span class="string">"Bachelor of Science in Computer Software Engineering(Exchange semester) from Altinbas University, Istanbul, Turkey"</span> <span class="punctuation">}</span></div>',
+    '<div class="line indent-2"><span class="punctuation">]</span></div>',
+    '<br>',
+    '<div class="line indent"><span class="keyword">def</span> <span class="function-name">skills</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
+    '<br>',
+    '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
+    '<div class="line indent-3"><span class="string">\'HTML\'</span><span class="punctuation">,</span> <span class="string">\'CSS\'</span><span class="punctuation">,</span> <span class="string">\'Bootstrap\'</span><span class="punctuation">,</span></div>',
+    '<div class="line indent-3"><span class="string">\'JQuery\'</span><span class="punctuation">,</span> <span class="string">\'JavaScript\'</span><span class="punctuation">,</span> <span class="string">\'Vanilla js\'</span><span class="punctuation">,</span></div>',
+    '<div class="line indent-3"><span class="string">\'Flutter\'</span><span class="punctuation">,</span> <span class="string">\'Dart\'</span><span class="punctuation">,</span> <span class="string">\'Java\'</span><span class="punctuation">,</span></div>',
+    '<div class="line indent-3"><span class="string">\'Python\'</span><span class="punctuation">,</span> <span class="string">\'C++\'</span><span class="punctuation">,</span> <span class="string">\'Latex-Overleaf\'</span><span class="punctuation">,</span></div>',
+    '<div class="line indent-3"><span class="string">\'Git/Github\'</span><span class="punctuation">,</span> <span class="string">\'ASP .NET\'</span><span class="punctuation">,</span> <span class="string">\'PHP\'</span><span class="punctuation">,</span></div>',
+    '<div class="line indent-3"><span class="string">\'SQL\'</span><span class="punctuation">,</span> <span class="string">\'Web-extensions\'</span><span class="punctuation">,</span> <span class="string">\'Api integrations\'</span><span class="punctuation">,</span></div>',
+    '<div class="line indent-3"><span class="string">\'Firebase\'</span><span class="punctuation">,</span> <span class="string">\'Machine Learning models\'</span><span class="punctuation">,</span> <span class="string">\'ML Training\'</span><span class="punctuation">,</span></div>',
+    '<div class="line indent-3"><span class="string">\'Computer Vision\'</span><span class="punctuation">,</span> <span class="string">\'Front-End\'</span><span class="punctuation">,</span> <span class="string">\'Back-End\'</span><span class="punctuation">,</span></div>',
+    '<div class="line indent-2"><span class="punctuation">]</span></div>',
+    '<br>',
+];
+
+ const container = document.getElementById('typing-container');
+        const caretContainer = document.getElementById('caret-container');
+        let lineIndex = 0;
+
+        function typeLine() {
+            if (lineIndex < lines.length) {
+                container.insertBefore(document.createElement('div'), caretContainer);
+                caretContainer.previousSibling.innerHTML = lines[lineIndex];
+                lineIndex++;
+                setTimeout(typeLine, 500); // Adjust the delay here for typing speed
+            } 
+        }
+
+        typeLine();

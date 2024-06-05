@@ -142,6 +142,7 @@ body {
 }
 .section-title {
     color: #1d2b64;
+    
     margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -390,4 +391,80 @@ footer a:hover {
 
 .pic a:hover {
     letter-spacing: 0.2em;
+}
+
+
+#ABOUTME {
+    font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            color: #abb2bf;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            
+}
+
+.code-block {
+    background: #2c2727;
+            padding: 20px;
+            border-radius: 8px;
+            color: #abb2bf;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+}
+
+.line {
+    display: block;
+          
+}
+
+.indent {
+    padding-left: 20px;
+}
+
+.indent-2 {
+    padding-left: 40px;
+}
+
+.indent-3 {
+    padding-left: 60px;
+}
+
+.keyword {
+    color: #c678dd;
+}
+
+.classname, .function-name {
+    color: #61afef;
+}
+
+.parameter, .property {
+    color: #e06c75;
+}
+
+.operator, .punctuation {
+    color: #56b6c2;
+}
+
+.string {
+    color: #98c379;
+}
+
+.number {
+    color: #d19a66;
+}
+
+.comment {
+    color: #5c6370;
+}
+.caret {
+    display: inline;
+    border-right: .15em solid orange;
+    animation: caret 0.75s steps(1) infinite;
+}
+@keyframes caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
 }
