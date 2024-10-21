@@ -1,11 +1,14 @@
 body {
     font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #101820, #162229); /* Dark gradient */
+    
+    color: #00d4ff;/* Light futuristic text */
 }
 /* Header Section */
 .header {
-    background: linear-gradient(45deg, #1d2b64, #f8cdda);
+    background: linear-gradient(45deg, #101820, #162229); /* Dark gradient */
     height: 100vh;
-    color: white;
+    color: #00d4ff; /* Futuristic neon text */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -16,7 +19,7 @@ body {
 .intro-text {
     -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
     font-family: 'Arial', sans-serif;
-    color: #1d2b64;
+    color: #00d4ff;
     font-size: 2rem;
     font-weight: 400;
     margin-top: 20px;
@@ -26,7 +29,7 @@ body {
 .intro-text2 {
     animation: fadeInUp 1.5s;
     font-family: 'Arial', sans-serif;
-    color: #1d2b64;
+    color: #00d4ff;
     font-size: 2rem;
     font-weight: 700;
     margin-top: 20px;
@@ -37,6 +40,7 @@ body {
     position: relative;
     display: inline;
     white-space: nowrap;
+    
    
 }
 
@@ -45,7 +49,7 @@ body {
     font-family: 'Roboto', sans-serif;
     position: relative;
     display: inline-block;
-    color:  #f8cdda;
+    color: #00ffcc;
     font-size: 2rem;
     animation: animate 1s ease-in-out infinite;
     animation-delay: calc(0.05s * var(--i));
@@ -66,7 +70,7 @@ body {
 
 .animate-text {
     font-family: 'Courier New', Courier, monospace;
-    color: #1d2b64;
+    color: #00ffcc;
     animation: fadeInOut 2s ease-in-out infinite;
 }
 
@@ -133,15 +137,16 @@ body {
 }
 
 .navbar {
-    background: linear-gradient(45deg, #1d2b64, #f8cdda);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #101820, #162229); /* Futuristic gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Deeper shadow for tech look */
 }
 
 .navbar .navbar-brand, .navbar-nav .nav-link {
-    color: white;
+    
+    color: #00ffcc;/* Neon blue for text and links */
 }
 .section-title {
-    color: #1d2b64;
+    color: #00d4ff; /* Neon blue for section titles */
     
     margin-bottom: 30px;
     margin-top: 30px;
@@ -153,7 +158,7 @@ body {
     display: block;
     width: 80px;
     height: 3px;
-    background: #f8cdda;
+    background: #00ffcc;
     margin: 10px auto;
     border-radius: 3px;
 }
@@ -164,31 +169,33 @@ body {
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 15px #00ffcc; /* Glowing hover effect */
 }
 
 .card-title {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #1d2b64;
+    color: #00d4ff; /* Neon blue */
 }
 
 .contact-info p a {
-    color: #1d2b64;
+    color: #00d4ff; /* Neon blue */
     text-decoration: none;
 }
 
 .contact-info p a:hover {
     text-decoration: underline;
+    color: #00ffcc;
 }
 
 footer {
-    background: linear-gradient(45deg, #1d2b64, #f8cdda);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #bbb;
+    background: linear-gradient(45deg, #101820, #162229); /* Dark gradient */
+    color: #888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 footer a {
-    color: #bbb;
+    color: #00ffcc; /* Neon cyan for links */
 }
 
 footer a:hover {
@@ -304,7 +311,7 @@ footer a:hover {
     content: '';
     position: absolute;
     inset: -10px 140px;
-    background: linear-gradient(315deg,  #1d2b64, #f93872);
+    background: linear-gradient(315deg, #101820, #00d4ff); 
     transition: 0.5s;
     animation: animate2 4s linear infinite;
 }
@@ -326,7 +333,7 @@ footer a:hover {
     content: '';
     position: absolute;
     inset: 6px;
-    background: #ffffff;
+    background: #000000;
     border-radius: 50%;
     z-index: 1;
 }
@@ -364,7 +371,7 @@ footer a:hover {
     position: relative;
     font-size: 1.5em;
     text-align: center;
-    color: #800000;
+    color: #00ffcc;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -379,7 +386,7 @@ footer a:hover {
     position: relative;
     margin-top: 10px;
     padding: 10px 20px;
-    background: #800000;
+    background: #00ffcc;
     color: #ffffff;
     border-radius: 15px;
     font-weight: 350;
