@@ -414,7 +414,7 @@ footer a:hover {
 }
 
 .code-block {
-    background: #2c2727;
+            background: #2c2727;
             padding: 20px;
             border-radius: 8px;
             color: #abb2bf;
