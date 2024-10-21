@@ -179,7 +179,7 @@ body {
 }
 
 .contact-info p a {
-    color: #00d4ff; /* Neon blue */
+    color: #888; /* Neon blue */
     text-decoration: none;
 }
 
@@ -193,17 +193,6 @@ footer {
     color: #888;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
-
-footer a {
-    color: #00ffcc; /* Neon cyan for links */
-}
-
-footer a:hover {
-    color: #fff;
-}
-
-
-
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -477,4 +466,27 @@ footer a:hover {
 @keyframes caret {
     from, to { border-color: transparent; }
     50% { border-color: orange; }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between; /* Aligns left and right */
+    width: 100%; /* Full width for alignment */
+    max-width: 600px; /* Set a max-width for better readability */
+}
+
+.contact-left,
+.contact-right {
+    display: flex;
+    align-items: center; /* Aligns icons with text vertically */
+}
+
+.contact-left a {
+    margin-left: 5px; /* Space between icon and link */
 }
