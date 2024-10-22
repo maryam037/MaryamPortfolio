@@ -50,12 +50,15 @@ const lines = [
     '<div class="line indent"><span class="keyword">def</span> <span class="function-name">__init__</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
     '<br>',
     '<div class="line indent-2"><span class="parameter">self</span><span class="punctuation">.</span><span class="property">name</span> <span class="operator">=</span> <span class="string">\'Maryam Ashfaq\'</span></div>',
-    '<div class="line indent-2"><span class="parameter">self</span><span class="punctuation">.</span><span class="property">date_of_birth</span> <span class="operator">=</span> <span class="number">5-4-2001</span></div>',
+
     '<div class="line indent-2"><span class="parameter">self</span><span class="punctuation">.</span><span class="property">email</span> <span class="operator">=</span> <span class="string">\'Maryamashfaq1828@gmail.com\'</span></div>',
     '<div class="line indent"><br><span class="keyword">def</span> <span class="function-name">work_experience</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
+    
     '<br>',
     '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
-    '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2022-2022\'</span><span class="punctuation">:</span> <span class="string">\'Front-End Developer Intern at Teresol Pvt Ltd. \'</span> <span class="punctuation">},</span></div>',
+    '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2022\'</span><span class="punctuation">:</span> <span class="string">\'Front-End Developer Intern at Teresol Pvt Ltd. \'</span> <span class="punctuation">},</span></div>',
+    '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2024\'</span><span class="punctuation">:</span> <span class="string">\'Intern at Inter Services Public Relations (ISPR). \'</span> <span class="punctuation">},</span></div>',
+  
     '<div class="line indent-2"><span class="punctuation">]</span></div>',
     '<br>',
     '<div class="line indent"><span class="keyword">def</span> <span class="function-name">education</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
@@ -69,13 +72,15 @@ const lines = [
     '<br>',
     '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
     '<div class="line indent-3"><span class="string">\'HTML\'</span><span class="punctuation">,</span> <span class="string">\'CSS\'</span><span class="punctuation">,</span> <span class="string">\'Bootstrap\'</span><span class="punctuation">,</span></div>',
-    '<div class="line indent-3"><span class="string">\'JQuery\'</span><span class="punctuation">,</span> <span class="string">\'JavaScript\'</span><span class="punctuation">,</span> <span class="string">\'Vanilla js\'</span><span class="punctuation">,</span></div>',
+    '<div class="line indent-3"><span class="string">\'JQuery\'</span><span class="punctuation">,</span> <span class="string">\'JavaScript\'</span><span class="punctuation">,</span> <span class="string">\'React js\'</span><span class="punctuation">,</span></div>',
     '<div class="line indent-3"><span class="string">\'Flutter\'</span><span class="punctuation">,</span> <span class="string">\'Dart\'</span><span class="punctuation">,</span> <span class="string">\'Java\'</span><span class="punctuation">,</span></div>',
     '<div class="line indent-3"><span class="string">\'Python\'</span><span class="punctuation">,</span> <span class="string">\'C++\'</span><span class="punctuation">,</span> <span class="string">\'Latex-Overleaf\'</span><span class="punctuation">,</span></div>',
     '<div class="line indent-3"><span class="string">\'Git/Github\'</span><span class="punctuation">,</span> <span class="string">\'ASP .NET\'</span><span class="punctuation">,</span> <span class="string">\'PHP\'</span><span class="punctuation">,</span></div>',
     '<div class="line indent-3"><span class="string">\'SQL\'</span><span class="punctuation">,</span> <span class="string">\'Web-extensions\'</span><span class="punctuation">,</span> <span class="string">\'API integrations\'</span><span class="punctuation">,</span></div>',
     '<div class="line indent-3"><span class="string">\'Firebase\'</span><span class="punctuation">,</span> <span class="string">\'Machine Learning models\'</span><span class="punctuation">,</span> <span class="string">\'ML Algorithms\'</span><span class="punctuation">,</span></div>',
     '<div class="line indent-3"><span class="string">\'Computer Vision\'</span><span class="punctuation">,</span> <span class="string">\'Front-End\'</span><span class="punctuation">,</span> <span class="string">\'Back-End\'</span><span class="punctuation">,</span></div>',
+    '<div class="line indent-3"><span class="string">\'Web applications\'</span><span class="punctuation">,</span> <span class="string">\'Mobile Applications\'</span><span class="punctuation">,</span> <span class="string">\'Hybrid/Native\'</span><span class="punctuation">,</span></div>',
+    
     '<div class="line indent-2"><span class="punctuation">]</span></div>',
     '<br>',
 ];

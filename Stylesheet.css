@@ -490,3 +490,26 @@ footer {
 .contact-left a {
     margin-left: 5px; /* Space between icon and link */
 }
+
+#contact img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+.neon-border {
+    border: 2px solid #00ffcc; /* Neon border color */
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc; /* Neon glow effect */
+}
+
+.neon-button {
+    background-color: #00ffcc; /* Neon background color */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    color: #fff; /* Text color */
+    box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; /* Neon glow effect */
+    transition: background-color 0.3s, transform 0.3s; /* Button hover effect */
+}
+
+.neon-button:hover {
+    background-color: #009f9c; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
