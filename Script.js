@@ -1,3 +1,12 @@
+
+  $(document).ready(function () {
+    $('.navbar-nav .nav-link').click(function () {
+      $('.navbar-collapse').collapse('hide');
+    });
+  });
+
+
+
 $(document).ready(function(){
     $('nav a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
@@ -109,4 +118,31 @@ function typeLine() {
     });
 }, { threshold: 0.5 }); // Adjust threshold as needed
 
-observer.observe(document.getElementById('ABOUTME'));
+observer.observe(document.getElementById('AboutMe'));
+
+const projectCards = document.querySelectorAll('.project-card');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+let currentIndex = 0;
+
+function showProject(index) {
+    projectCards.forEach((card, i) => {
+        card.classList.remove('active');
+        if (i === index) {
+            card.classList.add('active');
+        }
+    });
+}
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % projectCards.length; // Loop back to start
+    showProject(currentIndex);
+});
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + projectCards.length) % projectCards.length; // Loop to end
+    showProject(currentIndex);
+});
+
+// Initialize the first project
+showProject(currentIndex);
