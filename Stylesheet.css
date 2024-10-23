@@ -1,10 +1,31 @@
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, #101820, #162229); /* Dark gradient */
     
-    color: #00d4ff;/* Light futuristic text */
 }
-/* Header Section */
+
+.navbar {
+    background: black; /* Futuristic gradient */
+}
+
+
+.navbar .navbar-brand, .navbar-nav .nav-link {
+    color: #00ffcc; /* Neon blue for text and links */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 255, 204, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #00d4ff; /* Neon blue on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+
 .header {
     background: linear-gradient(45deg, #101820, #162229); /* Dark gradient */
     height: 100vh;
@@ -15,7 +36,6 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
 .intro-text {
     -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
     font-family: 'Arial', sans-serif;
@@ -136,15 +156,7 @@ body {
     }
 }
 
-.navbar {
-    background: linear-gradient(45deg, #101820, #162229); /* Futuristic gradient */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Deeper shadow for tech look */
-}
 
-.navbar .navbar-brand, .navbar-nav .nav-link {
-    
-    color: #00ffcc;/* Neon blue for text and links */
-}
 .section-title {
     color: #00d4ff; /* Neon blue for section titles */
     
@@ -163,20 +175,6 @@ body {
     border-radius: 3px;
 }
 
-.card {
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00ffcc; /* Glowing hover effect */
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #00d4ff; /* Neon blue */
-}
 
 .contact-info p a {
     color: #888; /* Neon blue */
@@ -189,7 +187,7 @@ body {
 }
 
 footer {
-    background: linear-gradient(45deg, #101820, #162229); /* Dark gradient */
+    background: black; /* Dark gradient */
     color: #888;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -287,10 +285,19 @@ footer {
 
 
 
+#MyResume {
+    background-color: #1a1a1a; /* Dark background for Resume section */
+    padding: 20px;
+    color: #808080;
+    margin: 0 auto;
+}
+
+
+
 .box {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     background: #808080;
     border-radius: 50%;
     overflow: hidden;
@@ -358,17 +365,22 @@ footer {
 
 .pic h2 {
     position: relative;
-    font-size: 1.5em;
+ 
     text-align: center;
-    color: #00ffcc;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+
+    color:  #00d4ff;
+    
+
+    font-family: 'Arial', sans-serif;
+    
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 10px;
 }
 
 .pic h2 span {
-    font-weight: 300;
-    font-size: 0.75em;
+    font-weight: 200;
+    font-size: 1.5rem;
 }
 
 .pic a {
@@ -376,9 +388,9 @@ footer {
     margin-top: 10px;
     padding: 10px 20px;
     background: #00ffcc;
-    color: #ffffff;
+    color: black;
     border-radius: 15px;
-    font-weight: 350;
+    font-weight: 200;
     font-size: 1.2em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -391,27 +403,36 @@ footer {
 }
 
 
-#ABOUTME {
-    font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 0;
-            color: #abb2bf;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            
+#AboutMe {
+   
+    background-color: #282c34; /* Background for About Me section */
+ 
+    margin: 0 auto;
+    padding: 20px;
+   
+    color: #808080;
+}
+
+.section-title {
+
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #00ffcc; /* Neon color for consistency */
 }
 
 .code-block {
-            background: #2c2727;
-            padding: 20px;
-            border-radius: 8px;
-            color: #abb2bf;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-word;
-            display: none; /* Initially hidden */
-            
+    font-family: 'Courier New', Courier, monospace;
+    background: black;
+    padding: 20px; /* Adjust padding for the code block */
+    border-radius: 8px;
+    max-width: 80%; /* Set a maximum width for the code block */
+    margin: 0 auto; /* Center the code block */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    display: none; /* Initially hidden */
 }
 
 .line {
@@ -491,9 +512,6 @@ footer {
     margin-left: 5px; /* Space between icon and link */
 }
 
-#contact img:hover {
-    transform: scale(1.05); /* Slightly enlarges the image on hover */
-}
 
 .neon-border {
     border: 2px solid #00ffcc; /* Neon border color */
@@ -512,4 +530,96 @@ footer {
 .neon-button:hover {
     background-color: #009f9c; /* Darker shade on hover */
     transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+
+#projects {
+    background-color: #121212; /* Dark background for the section */
+    color: #ffffff; /* Text color */
+    padding: 20px; /* Top and bottom padding */
+}
+
+
+.project-slider {
+    position: relative; /* Positioning for absolute children */
+    max-width: 1000px; /* Limit width */
+    margin: auto; /* Center the slider */
+    height: 500px; /* Set height for uniformity */
+}
+
+.project-card {
+    position: absolute; /* Stack cards */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Smooth transition */
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.project-card.active {
+    opacity: 1; /* Show active card */
+}
+
+.project-image {
+    width: 40%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    max-height: 300px; /* Limit height */
+}
+
+.project-details {
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding */
+}
+
+.project-title {
+    font-size: 1.5rem; /* Title size */
+    color: #00d4ff; /* Title color */
+}
+
+.project-description {
+    margin: 10px 0; /* Space around description */
+}
+
+
+.btn-github {
+    background-color: #00ffcc; /* Button background color */
+    color: #282c34; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Button text weight */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.btn-github:hover {
+    background-color: #00d4ff; /* Lighter button color on hover */
+}
+
+.nav-buttons {
+    position: absolute; /* Position for navigation buttons */
+    top: 50%; /* Center vertically */
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between buttons */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: none; /* No border */
+    color: #ffffff; /* Text color */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 18px; /* Font size */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
 }
