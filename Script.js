@@ -119,14 +119,14 @@ function typeLine() {
 }, { threshold: 0.5 }); // Adjust threshold as needed
 
 observer.observe(document.getElementById('AboutMe'));
+// Slider for LitterGo project
+const litterGoCards = document.querySelectorAll('.project-card');
+const litterGoPrevButton = document.querySelector('.project-slider .prev');
+const litterGoNextButton = document.querySelector('.project-slider .next');
+let litterGoIndex = 0;
 
-const projectCards = document.querySelectorAll('.project-card');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-let currentIndex = 0;
-
-function showProject(index) {
-    projectCards.forEach((card, i) => {
+function showLitterGoProject(index) {
+    litterGoCards.forEach((card, i) => {
         card.classList.remove('active');
         if (i === index) {
             card.classList.add('active');
@@ -134,15 +134,43 @@ function showProject(index) {
     });
 }
 
-nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % projectCards.length; // Loop back to start
-    showProject(currentIndex);
+litterGoNextButton.addEventListener('click', () => {
+    litterGoIndex = (litterGoIndex + 1) % litterGoCards.length;
+    showLitterGoProject(litterGoIndex);
 });
 
-prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + projectCards.length) % projectCards.length; // Loop to end
-    showProject(currentIndex);
+litterGoPrevButton.addEventListener('click', () => {
+    litterGoIndex = (litterGoIndex - 1 + litterGoCards.length) % litterGoCards.length;
+    showLitterGoProject(litterGoIndex);
 });
 
-// Initialize the first project
-showProject(currentIndex);
+// Initialize the first project for LitterGo
+showLitterGoProject(litterGoIndex);
+
+// Slider for To Do List project
+const todoListCards = document.querySelectorAll('.project-card2');
+const todoListPrevButton = document.querySelector('.project-slider2 .prev');
+const todoListNextButton = document.querySelector('.project-slider2 .next');
+let todoListIndex = 0;
+
+function showTodoListProject(index) {
+    todoListCards.forEach((card, i) => {
+        card.classList.remove('active');
+        if (i === index) {
+            card.classList.add('active');
+        }
+    });
+}
+
+todoListNextButton.addEventListener('click', () => {
+    todoListIndex = (todoListIndex + 1) % todoListCards.length;
+    showTodoListProject(todoListIndex);
+});
+
+todoListPrevButton.addEventListener('click', () => {
+    todoListIndex = (todoListIndex - 1 + todoListCards.length) % todoListCards.length;
+    showTodoListProject(todoListIndex);
+});
+
+// Initialize the first project for To Do List
+showTodoListProject(todoListIndex);
