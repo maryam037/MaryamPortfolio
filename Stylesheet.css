@@ -613,11 +613,11 @@ footer .container-fluid {
 }
 
 .project-image {
-    width: auto; /* Full width */
+    width: 40%; /* Full width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners */
     max-height: 300px; /* Limit height */
-    max-width: 500px;
+  
 }
 
 .project-details {
