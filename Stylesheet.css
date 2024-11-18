@@ -4,7 +4,10 @@ html, body {
     height: 100%;
     font-family: 'Arial', sans-serif;
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> cd85a2a00f8baa10e22f4d64019e71792b517d6f
 }
 
 .navbar {
@@ -28,7 +31,11 @@ html, body {
 
 
 .header {
+<<<<<<< HEAD
     background-color: #121212; /* Dark gradient */
+=======
+    background: linear-gradient(45deg, #101820, #162229); /* Dark gradient */
+>>>>>>> cd85a2a00f8baa10e22f4d64019e71792b517d6f
     height: 100vh;
     color: #00d4ff; /* Futuristic neon text */
     text-align: center;
@@ -39,15 +46,34 @@ html, body {
 }
 .intro-text {
     -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+<<<<<<< HEAD
     font-family: 'Poppins', sans-serif; /* Change to Poppins for a modern look */
     color: #ff4500; /* Change to Dodger Blue for a vibrant look */
     font-size: 3rem; /* Increase font size for more impact */
     font-weight: 600; /* Medium weight for a bolder feel */
+=======
+    font-family: 'Arial', sans-serif;
+    color: #00d4ff;
+    font-size: 2rem;
+    font-weight: 400;
+>>>>>>> cd85a2a00f8baa10e22f4d64019e71792b517d6f
     margin-top: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for depth */
     transition: 0.5s;
     animation: fadeInUp 1.5s;
 }
+<<<<<<< HEAD
+=======
+.intro-text2 {
+    animation: fadeInUp 1.5s;
+    font-family: 'Arial', sans-serif;
+    color: #00d4ff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+>>>>>>> cd85a2a00f8baa10e22f4d64019e71792b517d6f
 
 .intro-text2 {
     animation: fadeInUp 1.5s;
@@ -408,7 +434,11 @@ footer {
 
 #AboutMe {
    
+<<<<<<< HEAD
     background-color: #1a1a1a; /* Background for About Me section */
+=======
+    background-color: #282c34; /* Background for About Me section */
+>>>>>>> cd85a2a00f8baa10e22f4d64019e71792b517d6f
  
     margin: 0 auto;
     padding: 20px;
@@ -548,6 +578,7 @@ footer .container-fluid {
     margin-top: 20px; /* Space above the copyright section */
 }
 
+<<<<<<< HEAD
 .card {
     background-color: #1a1a1a; /* Dark background for the card */
     color: #808080; /* White text for contrast */
@@ -567,6 +598,11 @@ footer .container-fluid {
 
 #contact {
     background-color: #1a1a1a;/* Dark background for the section */
+=======
+
+#contact {
+    background-color: #121222; /* Dark background for the section */
+>>>>>>> cd85a2a00f8baa10e22f4d64019e71792b517d6f
     
     padding: 20px; /* Top and bottom padding */
     color: #808080;
