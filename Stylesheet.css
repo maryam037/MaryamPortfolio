@@ -4,6 +4,7 @@ html, body {
     height: 100%;
     font-family: 'Arial', sans-serif;
     
+    
 }
 
 .navbar {
@@ -27,7 +28,7 @@ html, body {
 
 
 .header {
-    background: linear-gradient(45deg, #101820, #162229); /* Dark gradient */
+    background-color: #121212; /* Dark gradient */
     height: 100vh;
     color: #00d4ff; /* Futuristic neon text */
     text-align: center;
@@ -38,24 +39,26 @@ html, body {
 }
 .intro-text {
     -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-    font-family: 'Arial', sans-serif;
-    color: #00d4ff;
-    font-size: 2rem;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif; /* Change to Poppins for a modern look */
+    color: #ff4500; /* Change to Dodger Blue for a vibrant look */
+    font-size: 3rem; /* Increase font size for more impact */
+    font-weight: 600; /* Medium weight for a bolder feel */
     margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for depth */
     transition: 0.5s;
     animation: fadeInUp 1.5s;
-}
-.intro-text2 {
-    animation: fadeInUp 1.5s;
-    font-family: 'Arial', sans-serif;
-    color: #00d4ff;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-top: 20px;
-    transition: 0.5s;
 }
 
+.intro-text2 {
+    animation: fadeInUp 1.5s;
+    font-family: 'Poppins', sans-serif; /* Change to Poppins for consistency */
+    color: #ff4500; /* Change to Orange Red for contrast */
+    font-size: 2.5rem; /* Slightly smaller size for emphasis */
+    font-weight: 800; /* Bold weight for a strong presence */
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    transition: 0.5s;
+}
 .wavy {
     position: relative;
     display: inline;
@@ -405,7 +408,7 @@ footer {
 
 #AboutMe {
    
-    background-color: #282c34; /* Background for About Me section */
+    background-color: #1a1a1a; /* Background for About Me section */
  
     margin: 0 auto;
     padding: 20px;
@@ -545,9 +548,25 @@ footer .container-fluid {
     margin-top: 20px; /* Space above the copyright section */
 }
 
+.card {
+    background-color: #1a1a1a; /* Dark background for the card */
+    color: #808080; /* White text for contrast */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Slightly rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+.card-body {
+    padding: 20px; /* Padding inside the card */
+}
 
 #contact {
-    background-color: #121222; /* Dark background for the section */
+    background-color: #1a1a1a;/* Dark background for the section */
     
     padding: 20px; /* Top and bottom padding */
     color: #808080;
