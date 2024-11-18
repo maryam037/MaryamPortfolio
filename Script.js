@@ -1,29 +1,7 @@
-<<<<<<< HEAD
 $(document).ready(function () {
   $(".navbar-nav .nav-link").click(function () {
     $(".navbar-collapse").collapse("hide");
   });
-=======
-
-  $(document).ready(function () {
-    $('.navbar-nav .nav-link').click(function () {
-      $('.navbar-collapse').collapse('hide');
-    });
-  });
-
-
-
-$(document).ready(function(){
-    $('nav a[href^="#"]').on('click', function(event) {
-        var target = $(this.getAttribute('href'));
-        if( target.length ) {
-            event.preventDefault();
-            $('html, body').stop().animate({
-                scrollTop: target.offset().top
-            }, 1000);
-        }
-    });
->>>>>>> cd85a2a00f8baa10e22f4d64019e71792b517d6f
 });
 
 $(document).ready(function () {
@@ -168,113 +146,16 @@ litterGoNextButton.addEventListener("click", () => {
   showLitterGoProject(litterGoIndex);
 });
 
-<<<<<<< HEAD
 litterGoPrevButton.addEventListener("click", () => {
   litterGoIndex =
     (litterGoIndex - 1 + litterGoCards.length) % litterGoCards.length;
   showLitterGoProject(litterGoIndex);
-=======
-const lines = [
-    '<div class="line"><span class="comment"># Know me Better. </span></div>',
-    '<div class="line"><span class="comment"># I can, because I believe.</span></div>',
-    '<div class="line"><span class="comment"># My vast variety of skills is continuously expanding.</span></div>',
-    '<br>',
-    '<div class="line"><span class="keyword">class</span> <span class="classname"></span><span class="punctuation">:</span></div>',
-    '<br>',
-    '<div class="line indent"><span class="keyword">def</span> <span class="function-name">__init__</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
-    '<br>',
-    '<div class="line indent-2"><span class="parameter">self</span><span class="punctuation">.</span><span class="property">name</span> <span class="operator">=</span> <span class="string">\'Maryam Ashfaq\'</span></div>',
-
-    '<div class="line indent-2"><span class="parameter">self</span><span class="punctuation">.</span><span class="property">email</span> <span class="operator">=</span> <span class="string">\'Maryamashfaq1828@gmail.com\'</span></div>',
-    '<div class="line indent"><br><span class="keyword">def</span> <span class="function-name">work_experience</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
-    
-    '<br>',
-    '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
-    '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2022\'</span><span class="punctuation">:</span> <span class="string">\'Front-End Developer Intern at Teresol Pvt Ltd. \'</span> <span class="punctuation">},</span></div>',
-    '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2024\'</span><span class="punctuation">:</span> <span class="string">\'Intern at Inter Services Public Relations (ISPR). \'</span> <span class="punctuation">},</span></div>',
-  
-    '<div class="line indent-2"><span class="punctuation">]</span></div>',
-    '<br>',
-    '<div class="line indent"><span class="keyword">def</span> <span class="function-name">education</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
-    '<br>',
-    '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
-    '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2020-2024\'</span><span class="punctuation">:</span> <span class="string">"Bachelor of Science in Information Technology from Bahria University, Islamabad, Pakistan"</span> <span class="punctuation">},</span></div>',
-    '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2021-2022\'</span><span class="punctuation">:</span> <span class="string">"Bachelor of Science in Computer Software Engineering(Exchange semester) from Altinbas University, Istanbul, Turkey"</span> <span class="punctuation">}</span></div>',
-    '<div class="line indent-2"><span class="punctuation">]</span></div>',
-    '<br>',
-    '<div class="line indent"><span class="keyword">def</span> <span class="function-name">skills</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
-    '<br>',
-    '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
-    '<div class="line indent-3"><span class="string">\'HTML\'</span><span class="punctuation">,</span> <span class="string">\'CSS\'</span><span class="punctuation">,</span> <span class="string">\'Bootstrap\'</span><span class="punctuation">,</span></div>',
-    '<div class="line indent-3"><span class="string">\'JQuery\'</span><span class="punctuation">,</span> <span class="string">\'JavaScript\'</span><span class="punctuation">,</span> <span class="string">\'React js\'</span><span class="punctuation">,</span></div>',
-    '<div class="line indent-3"><span class="string">\'Flutter\'</span><span class="punctuation">,</span> <span class="string">\'Dart\'</span><span class="punctuation">,</span> <span class="string">\'Java\'</span><span class="punctuation">,</span></div>',
-    '<div class="line indent-3"><span class="string">\'Python\'</span><span class="punctuation">,</span> <span class="string">\'C++\'</span><span class="punctuation">,</span> <span class="string">\'Latex-Overleaf\'</span><span class="punctuation">,</span></div>',
-    '<div class="line indent-3"><span class="string">\'Git/Github\'</span><span class="punctuation">,</span> <span class="string">\'ASP .NET\'</span><span class="punctuation">,</span> <span class="string">\'PHP\'</span><span class="punctuation">,</span></div>',
-    '<div class="line indent-3"><span class="string">\'SQL\'</span><span class="punctuation">,</span> <span class="string">\'Web-extensions\'</span><span class="punctuation">,</span> <span class="string">\'API integrations\'</span><span class="punctuation">,</span></div>',
-    '<div class="line indent-3"><span class="string">\'Firebase\'</span><span class="punctuation">,</span> <span class="string">\'Machine Learning models\'</span><span class="punctuation">,</span> <span class="string">\'ML Algorithms\'</span><span class="punctuation">,</span></div>',
-    '<div class="line indent-3"><span class="string">\'Computer Vision\'</span><span class="punctuation">,</span> <span class="string">\'Front-End\'</span><span class="punctuation">,</span> <span class="string">\'Back-End\'</span><span class="punctuation">,</span></div>',
-    '<div class="line indent-3"><span class="string">\'Web applications\'</span><span class="punctuation">,</span> <span class="string">\'Mobile Applications\'</span><span class="punctuation">,</span> <span class="string">\'Hybrid/Native\'</span><span class="punctuation">,</span></div>',
-    
-    '<div class="line indent-2"><span class="punctuation">]</span></div>',
-    '<br>',
-];
-
-const container = document.getElementById('typing-container');
-const caretContainer = document.getElementById('caret-container');
-let lineIndex = 0;
-
-function typeLine() {
-    if (lineIndex < lines.length) {
-        container.insertBefore(document.createElement('div'), caretContainer);
-        caretContainer.previousSibling.innerHTML = lines[lineIndex];
-        lineIndex++;
-        setTimeout(typeLine, 500); // Adjust the delay here for typing speed
-    } 
-}
-
- // Intersection Observer to start typing animation on scroll
- const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            container.style.display = 'block'; // Show the container
-            typeLine(); // Start typing animation
-            observer.unobserve(entry.target); // Stop observing after animation starts
-        }
-    });
-}, { threshold: 0.5 }); // Adjust threshold as needed
-
-observer.observe(document.getElementById('AboutMe'));
-// Slider for LitterGo project
-const litterGoCards = document.querySelectorAll('.project-card');
-const litterGoPrevButton = document.querySelector('.project-slider .prev');
-const litterGoNextButton = document.querySelector('.project-slider .next');
-let litterGoIndex = 0;
-
-function showLitterGoProject(index) {
-    litterGoCards.forEach((card, i) => {
-        card.classList.remove('active');
-        if (i === index) {
-            card.classList.add('active');
-        }
-    });
-}
-
-litterGoNextButton.addEventListener('click', () => {
-    litterGoIndex = (litterGoIndex + 1) % litterGoCards.length;
-    showLitterGoProject(litterGoIndex);
-});
-
-litterGoPrevButton.addEventListener('click', () => {
-    litterGoIndex = (litterGoIndex - 1 + litterGoCards.length) % litterGoCards.length;
-    showLitterGoProject(litterGoIndex);
->>>>>>> cd85a2a00f8baa10e22f4d64019e71792b517d6f
 });
 
 // Initialize the first project for LitterGo
 showLitterGoProject(litterGoIndex);
 
 // Slider for To Do List project
-<<<<<<< HEAD
 const todoListCards = document.querySelectorAll(".project-card2");
 const todoListPrevButton = document.querySelector(".project-slider2 .prev");
 const todoListNextButton = document.querySelector(".project-slider2 .next");
@@ -298,30 +179,6 @@ todoListPrevButton.addEventListener("click", () => {
   todoListIndex =
     (todoListIndex - 1 + todoListCards.length) % todoListCards.length;
   showTodoListProject(todoListIndex);
-=======
-const todoListCards = document.querySelectorAll('.project-card2');
-const todoListPrevButton = document.querySelector('.project-slider2 .prev');
-const todoListNextButton = document.querySelector('.project-slider2 .next');
-let todoListIndex = 0;
-
-function showTodoListProject(index) {
-    todoListCards.forEach((card, i) => {
-        card.classList.remove('active');
-        if (i === index) {
-            card.classList.add('active');
-        }
-    });
-}
-
-todoListNextButton.addEventListener('click', () => {
-    todoListIndex = (todoListIndex + 1) % todoListCards.length;
-    showTodoListProject(todoListIndex);
-});
-
-todoListPrevButton.addEventListener('click', () => {
-    todoListIndex = (todoListIndex - 1 + todoListCards.length) % todoListCards.length;
-    showTodoListProject(todoListIndex);
->>>>>>> cd85a2a00f8baa10e22f4d64019e71792b517d6f
 });
 
 // Initialize the first project for To Do List
