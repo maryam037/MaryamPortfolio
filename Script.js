@@ -81,7 +81,7 @@ const lines = [
   "<br>",
   '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
   '<div class="line indent-3"><span class="string">\'HTML\'</span><span class="punctuation">,</span> <span class="string">\'CSS\'</span><span class="punctuation">,</span> <span class="string">\'Bootstrap\'</span><span class="punctuation">,</span></div>',
-  '<div class="line indent-3"><span class="string">\'JQuery\'</span><span class="punctuation">,</span> <span class="string">\'JavaScript\'</span><span class="punctuation">,</span> <span class="string">\'React js\'</span><span class="punctuation">,</span></div>',
+  '<div class="line indent-3"><span class="string">\'JQuery\'</span><span class="punctuation">,</span> <span class="string">\'JavaScript\'</span><span class="punctuation">,</span> <span class="string">\'Vanilla js\'</span><span class="punctuation">,</span></div>',
   '<div class="line indent-3"><span class="string">\'Flutter\'</span><span class="punctuation">,</span> <span class="string">\'Dart\'</span><span class="punctuation">,</span> <span class="string">\'Java\'</span><span class="punctuation">,</span></div>',
   '<div class="line indent-3"><span class="string">\'ReactJs\'</span><span class="punctuation">,</span> <span class="string">\'NodeJs\'</span><span class="punctuation">,</span> <span class="string">\'ExpressJS\'</span><span class="punctuation">,</span></div>',
   '<div class="line indent-3"><span class="string">\'Vite\'</span><span class="punctuation">,</span> <span class="string">\'MongoDB\'</span><span class="punctuation">,</span> <span class="string">\'ASP .NET\'</span><span class="punctuation">,</span></div>',
