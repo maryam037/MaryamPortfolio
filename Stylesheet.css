@@ -714,3 +714,12 @@ footer .container-fluid {
 .project-card2.active {
     opacity: 1; /* Show active card */
 }
+
+.read-more {
+    color: #00ffcc;
+    cursor: pointer;
+}
+
+.hidden-content {
+    display: none;
+}
