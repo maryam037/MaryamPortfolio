@@ -386,7 +386,7 @@ footer {
     font-size: 1.5rem;
 }
 
-.pic a {
+.btn a {
     position: relative;
     margin-top: 10px;
     padding: 10px 20px;
@@ -401,7 +401,7 @@ footer {
     transition: 0.5s;
 }
 
-.pic a:hover {
+.btn a:hover {
     letter-spacing: 0.2em;
 }
 
@@ -665,6 +665,12 @@ footer .container-fluid {
     background-color: #009f9c;
     transform: scale(1.05);
 }
+
+.blurred-image {
+    filter: blur(2px); /* Adjust the blur intensity */
+    transition: filter 0.3s ease; /* Smooth transition if needed */
+}
+
 
 
 .nav-buttons {
