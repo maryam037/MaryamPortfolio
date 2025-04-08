@@ -223,6 +223,38 @@
             </div>
           </div>
         </div>
+         <!-- Real-time Chat Project Card -->
+         <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="section-title">Real-time Chat Website</h3>
+            <p class="text-justify">
+              The chat application is a minimal real-time communication platform built using modern web technologies. The system architecture follows a traditional client-server model with a React-based frontend and Node.js backend, connected through WebSocket technology for instantaneous data transfer.
+
+             <span class="read-more">Read More...</span>
+              <span class="hidden-content">   On the backend, the application utilizes Express.js as the web server framework, providing the fundamental HTTP server capabilities. The real-time functionality is implemented through Socket.IO, which establishes persistent WebSocket connections between the server and clients. This enables bidirectional communication essential for instant messaging features. The server maintains in-memory data structures to track active users and store message history, with user sessions managed through unique socket identifiers. The architecture includes comprehensive event handling for various chat operations including user authentication, message broadcasting, read receipts, and presence notifications.
+              
+                The frontend is constructed as a single-page application using React.js, employing functional components and hooks for state management. React Router facilitates navigation between different views while maintaining application state. The user interface is divided into distinct components including a login screen, contact list, and chat window, each handling specific aspects of the user experience. Real-time updates are achieved through the Socket.IO client library, which maintains a constant connection to the server and processes incoming events.
+                
+                <br>The application implements several advanced chat features including typing indicators, message read receipts, and online status tracking. These are made possible through the WebSocket connection's low-latency communication capabilities. The frontend automatically updates its display in response to server events, providing users with immediate feedback about message delivery and contact availability. The system demonstrates effective separation of concerns between presentation logic and communication handling, with React components focused on rendering while socket-related operations are managed through dedicated event handlers.
+                
+                Error handling mechanisms are implemented at both the client and server levels, ensuring graceful degradation when network issues occur. The architecture supports future scalability through its modular design, with clear boundaries between different functional areas. The combination of React's component-based architecture with Socket.IO's real-time capabilities results in a responsive and interactive user experience that meets modern expectations for chat applications.
+                </span> </p>
+            <div class="text-center">
+              <a href="https://github.com/maryam037/React-Chat-app" class="btn btn-primary btn-github" target="_blank">View on GitHub</a>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9 mb-4">
+                  <video class="embed-responsive-item" controls muted autoplay>
+                    <source src="videos/chatt .mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
     
         <!-- Skateboarding Project Card -->
         <div class="card mb-4">
@@ -253,6 +285,57 @@
           </div>
         </div>
     
+          <!-- MERN Dashboard Project Card -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="section-title">MERN Dashboard for delivery agents data </h3>
+              <p class="text-justify">
+                The AgentTrack Delivery Analytics System is a comprehensive MERN stack application designed to analyze and visualize delivery agent performance metrics. Built with production-grade architecture, the system combines MongoDB for data storage, Express.js for backend services, React for the frontend interface, and Node.js as the runtime environment.
+
+<span class="read-more">Read More...</span>
+                <span class="hidden-content"> The backend infrastructure implements robust security measures including JWT authentication with HTTP-only cookies, rate limiting to prevent abuse, and Helmet middleware for secure headers. API endpoints are organized into modular routes for authentication, review management, user administration, and analytics processing. The server establishes a secure connection to MongoDB Atlas and implements environment-based configuration for deployment flexibility.
+
+                  At its core, the system features a sophisticated natural language processing engine that analyzes delivery agent reviews using the AFINN lexicon for sentiment analysis and Porter Stemmer algorithm for text normalization. This engine automatically tags reviews based on content and generates performance metrics. The analysis results are served through a RESTful API with response compression and CORS configuration for secure cross-origin requests.
+                  
+                  
+  <br>The frontend React application presents these analytics through an interactive dashboard with data visualizations powered by Recharts and D3.js. The interface implements role-based access control, with different views for administrators and regular users. State management is handled through React's Context API, while TailwindCSS provides utility-first styling for responsive design. Protected routes ensure only authenticated users can access sensitive data.
+
+  Development practices emphasize security and performance, with environment variable management, production optimizations like response compression, and middleware-based authentication. The system architecture demonstrates modern full-stack development patterns with clear separation of concerns between presentation, business logic, and data access layers.
+  </span>
+  
+              </p>
+              <div class="text-center">
+                <a href="https://github.com/maryam037/agenttrack" class="btn btn-primary btn-github" target="_blank">View on GitHub</a>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <p class="text-justify">
+                    User Dashboard
+                  <div class="embed-responsive embed-responsive-16by9 mb-4">
+                    <video class="embed-responsive-item" controls muted autoplay>
+                      <source src="videos/User.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <p class="text-justify">
+                    Admin Dashboard + Admin panel
+                  <div class="embed-responsive embed-responsive-16by9 mb-4">
+                    <video class="embed-responsive-item" controls muted autoplay>
+                      <source src="videos/Admin role.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         <!-- Recipe Recommendation System Card -->
         <div class="card mb-4">
           <div class="card-body">
