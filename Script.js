@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getColor(index) {
-    const colors = ["#ff8505", "#1eff4e", "#800000", "#f93872", "#FFD700"];
+   const colors = ["#e11d48", "#3b82f6", "#059669", "#f59e0b", "#8b5cf6"];
     return colors[index];
   }
 
@@ -67,6 +67,8 @@ const lines = [
   '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
   '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2022\'</span><span class="punctuation">:</span> <span class="string">\'Front-End Developer Intern at Teresol Pvt Ltd. \'</span> <span class="punctuation">},</span></div>',
   '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2024\'</span><span class="punctuation">:</span> <span class="string">\'Intern at Inter Services Public Relations (ISPR). \'</span> <span class="punctuation">},</span></div>',
+  '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2025\'</span><span class="punctuation">:</span> <span class="string">\'Junior Full Stack Developer at Calcite Technologies\'</span> <span class="punctuation">},</span></div>',
+
 
   '<div class="line indent-2"><span class="punctuation">]</span></div>',
   "<br>",
@@ -85,6 +87,15 @@ const lines = [
   '<div class="line indent-3"><span class="string">\'Flutter\'</span><span class="punctuation">,</span> <span class="string">\'Dart\'</span><span class="punctuation">,</span> <span class="string">\'Java\'</span><span class="punctuation">,</span></div>',
   '<div class="line indent-3"><span class="string">\'ReactJs\'</span><span class="punctuation">,</span> <span class="string">\'NodeJs\'</span><span class="punctuation">,</span> <span class="string">\'ExpressJS\'</span><span class="punctuation">,</span></div>',
   '<div class="line indent-3"><span class="string">\'Vite\'</span><span class="punctuation">,</span> <span class="string">\'MongoDB\'</span><span class="punctuation">,</span> <span class="string">\'ASP .NET\'</span><span class="punctuation">,</span></div>',
+  '<div class="line indent-3"><span class="string">\'Postman\'</span><span class="punctuation">,</span> <span class="string">\'Trello\'</span><span class="punctuation">,</span> <span class="string">\'Slack\'</span><span class="punctuation">,</span></div>',
+  '<div class="line indent-3"><span class="string">\'Tailwind CSS\'</span><span class="punctuation">,</span> <span class="string">\'Next JS\'</span><span class="punctuation">,</span> <span class="string">\'Typescript\'</span><span class="punctuation">,</span></div>',
+  '<div class="line indent-3"><span class="string">\'Render\'</span><span class="punctuation">,</span> <span class="string">\'AWS\'</span><span class="punctuation">,</span> <span class="string">\'S3 Bucket\'</span><span class="punctuation">,</span></div>',
+  '<div class="line indent-3"><span class="string">\'Hostinger\'</span><span class="punctuation">,</span> <span class="string">\'JWT\'</span><span class="punctuation">,</span> <span class="string">\'AUTH\'</span><span class="punctuation">,</span></div>',
+  '<div class="line indent-3"><span class="string">\'SOCKET.IO \'</span><span class="punctuation">,</span> <span class="string">\'Third Party APIs\'</span><span class="punctuation">,</span> <span class="string">\'Nodemailer\'</span><span class="punctuation">,</span></div>',
+ '<div class="line indent-3"><span class="string">\'Payment Gateways \'</span><span class="punctuation">,</span> <span class="string">\'Stripe\'</span><span class="punctuation">,</span> <span class="string">\'Paypal\'</span><span class="punctuation">,</span></div>',
+
+
+
 
   '<div class="line indent-3"><span class="string">\'Python\'</span><span class="punctuation">,</span> <span class="string">\'C++\'</span><span class="punctuation">,</span> <span class="string">\'Latex-Overleaf\'</span><span class="punctuation">,</span></div>',
   '<div class="line indent-3"><span class="string">\'Git/Github\'</span><span class="punctuation">,</span> <span class="string">\'Vercel\'</span><span class="punctuation">,</span> <span class="string">\'PHP\'</span><span class="punctuation">,</span></div>',
@@ -140,3 +151,58 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
+
+
+    // Read More functionality - Fixed
+    $(document).ready(function() {
+        $('.read-more').click(function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var $hiddenContent = $this.siblings('.hidden-content');
+            
+            if ($hiddenContent.is(':visible')) {
+                $hiddenContent.slideUp(300);
+                $this.text('Read More...');
+            } else {
+                $hiddenContent.slideDown(300);
+                $this.text('Read Less...');
+            }
+        });
+
+        // Smooth scrolling for internal links
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 100
+                }, 1000);
+            }
+        });
+
+        // Add animation on scroll
+        $(window).scroll(function() {
+            $('.enhanced-card').each(function() {
+                var elementTop = $(this).offset().top;
+                var elementBottom = elementTop + $(this).outerHeight();
+                var viewportTop = $(window).scrollTop();
+                var viewportBottom = viewportTop + $(window).height();
+
+                if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                    $(this).addClass('animate__animated animate__fadeInUp');
+                }
+            });
+        });
+
+        // Enhance gallery images on hover
+        $('.gallery-image').hover(
+            function() {
+                $(this).css('transform', 'scale(1.05)');
+            },
+            function() {
+                $(this).css('transform', 'scale(1)');
+            }
+        );
+    });
+
+    
