@@ -559,26 +559,36 @@ footer {
     color: #f3e9f7; /* Icon color */
     margin-right: 10px; /* Adds space between icon and text */
 }
+ footer {
+            background-color: #260b65; /* Footer background color */
+            color: white;
+            padding: 20px 0;
+            font-size: 14px; /* Footer text size */
+        }
 
-footer {
-    background-color: #260b65; /* Footer background color */
-    color: white;
-    padding: 20px 0;
-    font-size: 14px; /* Footer text size */
-}
+        footer a {
+            color: #f3e9f7; /* Link color */
+            transition: color 0.3s ease; /* Smooth transition on hover */
+            text-decoration: none;
+        }
 
-footer a {
-    color: #f3e9f7; /* Link color */
-    transition: color 0.3s ease; /* Smooth transition on hover */
-}
+        footer a:hover {
+            color: #2c3e50; /* Change color on hover */
+        }
 
-footer a:hover {
-    color: #2c3e50; /* Change color on hover */
-}
+        footer .container-fluid {
+            margin-top: 20px; /* Space above the copyright section */
+        }
 
-footer .container-fluid {
-    margin-top: 20px; /* Space above the copyright section */
-}
+        .video-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .video-link i {
+            font-size: 16px;
+        }
 
 .card {
     background-color:  #f3e9f7; /* Light background for the card */
