@@ -20,14 +20,28 @@ $(document).ready(function () {
 });
 let progress1 = document.getElementById("progressbar1");
 let progress2 = document.getElementById("progressbar2");
-let totalHeight = document.body.scrollHeight - window.innerHeight;
+
+function updateProgressBars() {
+  let totalHeight = document.body.scrollHeight - window.innerHeight;
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  let progressHeight = (scrollTop / totalHeight) * 100;
+  
+  if (progress1) {
+    progress1.style.height = progressHeight + "%";
+  }
+  if (progress2) {
+    progress2.style.height = progressHeight + "%";
+  }
+}
 
 window.onscroll = function () {
-  let progress1Height = (window.pageYOffset / totalHeight) * 100;
-  progress1.style.height = progress1Height + "%";
-  let progress2Height = (window.pageYOffset / totalHeight) * 100;
-  progress2.style.height = progress2Height + "%";
+  updateProgressBars();
 };
+
+// Update on page load and resize
+window.addEventListener('load', updateProgressBars);
+window.addEventListener('resize', updateProgressBars);
+updateProgressBars();
 
 document.addEventListener("DOMContentLoaded", function () {
   const texts = ["Things", "UX/UI", "Mobile Apps", "Web Apps", "AI/ML models"];
@@ -41,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getColor(index) {
-   const colors = ["#e11d48", "#3b82f6", "#059669", "#f59e0b", "#8b5cf6"];
+   const colors = ["#FFDB58", "#FFDB58", "#FFDB58", "#FFDB58", "#FFDB58"];
     return colors[index];
   }
 
@@ -77,6 +91,9 @@ const lines = [
   '<div class="line indent-2"><span class="keyword">return</span> <span class="punctuation">[</span></div>',
   '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2020-2024\'</span><span class="punctuation">:</span> <span class="string">"Bachelor of Science in Information Technology from Bahria University, Islamabad, Pakistan"</span> <span class="punctuation">},</span></div>',
   '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2021-2022\'</span><span class="punctuation">:</span> <span class="string">"Bachelor of Science in Computer Software Engineering(Exchange semester) from Altinbas University, Istanbul, Turkey"</span> <span class="punctuation">}</span></div>',
+  '<div class="line indent-3"><span class="punctuation">{</span> <span class="string">\'2025-2026\'</span><span class="punctuation">:</span> <span class="string">"Masters of Science in Data Science from University of Greenwich, London, United Kingdom"</span> <span class="punctuation">}</span></div>',
+ 
+  
   '<div class="line indent-2"><span class="punctuation">]</span></div>',
   "<br>",
   '<div class="line indent"><span class="keyword">def</span> <span class="function-name">skills</span><span class="punctuation">(</span><span class="parameter">self</span><span class="punctuation">):</span></div>',
@@ -138,34 +155,46 @@ const observer = new IntersectionObserver(
 
 observer.observe(document.getElementById("AboutMe"));
 
-document.addEventListener('DOMContentLoaded', function() {
-  const readMoreLinks = document.querySelectorAll('.read-more');
-  
-  readMoreLinks.forEach(link => {
-      link.addEventListener('click', function() {
-          const hiddenContent = this.nextElementSibling;
-          if (hiddenContent) {
-              hiddenContent.style.display = 'block';
-              this.style.display = 'none';
-          }
-      });
-  });
-});
-
-
     // Read More functionality - Fixed
     $(document).ready(function() {
-        $('.read-more').click(function(e) {
+        // Use event delegation to handle dynamically added content
+        $(document).on('click', '.read-more', function(e) {
             e.preventDefault();
-            var $this = $(this);
-            var $hiddenContent = $this.siblings('.hidden-content');
+            e.stopPropagation();
             
-            if ($hiddenContent.is(':visible')) {
-                $hiddenContent.slideUp(300);
-                $this.text('Read More...');
+            var $this = $(this);
+            var $hiddenContent = null;
+            
+            // Try to find the hidden content - it should be the next sibling span
+            var nextElement = this.nextElementSibling;
+            if (nextElement && $(nextElement).hasClass('hidden-content')) {
+                $hiddenContent = $(nextElement);
             } else {
-                $hiddenContent.slideDown(300);
-                $this.text('Read Less...');
+                // Fallback: search in siblings
+                $hiddenContent = $this.siblings('.hidden-content').first();
+            }
+            
+            if ($hiddenContent && $hiddenContent.length > 0) {
+                // Check current state by looking at display style
+                var currentDisplay = $hiddenContent.css('display');
+                var isCurrentlyHidden = currentDisplay === 'none' || !$hiddenContent.is(':visible');
+                
+                if (isCurrentlyHidden) {
+                    // Show the content
+                    $hiddenContent.css({
+                        'display': 'block',
+                        'overflow': 'visible',
+                        'text-overflow': 'clip'
+                    }).hide().slideDown(300, function() {
+                        $this.text('Read Less...');
+                    });
+                } else {
+                    // Hide the content
+                    $hiddenContent.slideUp(300, function() {
+                        $(this).css('display', 'none');
+                        $this.text('Read More...');
+                    });
+                }
             }
         });
 
